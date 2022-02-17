@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import styled from 'styled-components';
+import Header from './components/Header';
+import HeaderImg from './components/HeaderImg';
+
+const Wrapper = styled.div`
+  margin-top: 50px;
+  background-color: #373c3f;
+  width: 100%;
+  height: 150vh;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header className="fixed-top" />
+      <Wrapper>
+        <HeaderImg />
+        <div className="container">
+          <h4>/r/space: news, articles and discussion</h4>
+        </div>
+      </Wrapper>
     </div>
   );
 }
